@@ -1,0 +1,43 @@
+%btn {
+  width: 100%;
+  display: block;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-family: $font-copy;
+  padding: 0.7em 0;
+  margin: ($gutter / 2) 0;
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    margin: $gutter;
+  }
+}
+
+.btn--default {
+  @extend %btn;
+  background-color: $color-primary;
+}
+.btn--success {
+  @extend %btn;
+  background-color: $color-success;
+}
+.btn--error {
+  @extend %btn;
+  background-color: $color-error;
+}
+.btn--warning {
+  @extend %btn;
+  background-color: $color-warning;
+}
+.btn--info {
+  @extend %btn;
+  background-color: $color-info;
+}
+.btn--login {
+  margin: 0;
+}

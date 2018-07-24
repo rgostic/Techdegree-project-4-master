@@ -1,0 +1,25 @@
+.card {
+  margin: 1em 0;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .form__label {
+    font-family: "Dosis", sans-serif;
+    font-weight: bold;
+
+    &--hidden {
+      display: none;
+    }
+  }
+  input[type="text"], input[type="password"]{
+    margin-bottom: $gutter;
+    border: 0px solid red;
+    border-bottom: 5px solid $color-primary;
+    padding: 1em $gutter;
+  }
+}
+

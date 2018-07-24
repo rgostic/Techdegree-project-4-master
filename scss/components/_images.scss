@@ -1,0 +1,19 @@
+.img--logo {
+  margin: $gutter auto;
+  justify-self: center;
+  max-width: 100%;
+}
+
+.img--avatar {
+  margin: $gutter auto;
+  display: block;
+  max-width: 100%;
+}
+
+.img--frame {
+  margin: $gutter auto;
+  display: block;
+  max-width: 100%;
+  border: 1px solid lightgrey;
+  padding: 0.7em;
+}

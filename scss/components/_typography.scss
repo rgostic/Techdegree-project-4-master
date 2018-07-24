@@ -1,0 +1,39 @@
+.link {
+  color: $color-secondary;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: $font-headers;
+  text-decoration: none;
+}
+
+.nav__item a {
+  font-family: $font-headers;
+}
+
+.headline--primary {
+  color: $color-primary;
+  font-weight: bold;
+  padding-left: 1em;
+  font-family: $font-headers;
+}
+
+.headline--secondary {
+  color: $color-copy;
+  font-weight: 300;
+  font-family: $font-copy;
+}
+
+.card p {
+  font-family: $font-copy;
+  color: $color-copy;
+  line-height: 1.4;
+}
+
+.blockquote {
+  font-size: 1.6em;
+  color: $color-copy;
+  margin-top: $gutter;
+  font-family: "Lato", sans-serif;
+  border-left: 6px solid $color-primary;
+  padding-left: $gutter;
+}

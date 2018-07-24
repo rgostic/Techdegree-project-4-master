@@ -1,0 +1,13 @@
+@function px-to-pc($target, $context: 1000px) {
+  @return ($target /$context) * 100%;
+}
+
+@function per-line($items) {
+  $g-pct: px-to-pc($gutter) * 2;
+  $g-total: $items * $g-pct;
+  @return (100% / $items) - $g-total;
+}
+
+@function basis-calc($cols) {
+  @return 100% / 12 * $cols;
+}
