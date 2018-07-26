@@ -1,31 +1,32 @@
 .nav {
-  display:flex;
-  flex-direction: column;
-  align-items:stretch;
+  @include flex(column);
   width: 100%;
-  display: block;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: initial;
 
-    width: initial;
+  @include mq($breakpoint-med) {
+    @include flex(row, $justify: flex-end);
+
+    margin-top:40px;
   }
 }
 
 nav {
   width: 100%;
-  @media (min-width:768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-top:30px;
-  }
-
 }
+
+//nav {
+//  width: 100%;
+//  @media (min-width:$breakpoint-med) {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: flex-end;
+//    padding-top:30px;
+//  }
+//
+//}
 
 .nav__item {
   text-align: center;
-
+  width: 100%;
   a {
     padding: .8em 1em;
     border-radius: 5px;
@@ -39,7 +40,8 @@ nav {
     background-color: $color-primary;
   }
 
-  @media (min-width: 768px) {
+  @include mq($breakpoint-med) {
     display: inline-block;
+    width: initial;
   }
 }

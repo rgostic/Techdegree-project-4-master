@@ -12,7 +12,7 @@
 
   border-radius: 5px;
 
-  @media (min-width: 768px) {
+  @include mq($breakpoint-med) {
     display: inline-block;
     margin: $gutter;
   }

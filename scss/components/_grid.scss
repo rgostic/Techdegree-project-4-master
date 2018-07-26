@@ -5,24 +5,25 @@
 }
 
 .grid__row {
-  display: flex;
+  @include flex(column, $justify: stretch);
   margin: $gutter 0;
-  flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
+
+  @include mq($breakpoint-med) {
+    @include flex(row);
   }
 }
 
 %grid__col {
-  display: flex;
+  @include flex(column, $align: center);
+  width: 100%;
   padding: 0.7em;
   border-radius: 5px;
-  flex-direction: column;
-  margin: 0 ($gutter / 2);
 
-  @media (min-width: 768px) {
-    flex-direction: column;
-    align-items: center;  }
+  margin: 2px 0;
+
+  @include mq($breakpoint-med) {
+    margin: 2px ($gutter / 2);
+  }
 }
 
 @for $i from 1 through 12 {
@@ -43,13 +44,13 @@
 }
 
 .horizontal {
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @include mq($breakpoint-med) {
+    @include flex(row);
   }
 }
 
 .centered {
-  @media (min-width: 768px) {
+  @include mq($breakpoint-med) {
     flex-grow: 0;
     margin: 0 auto;
   }
